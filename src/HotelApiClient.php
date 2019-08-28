@@ -57,6 +57,7 @@ use Zend\Uri\UriFactory;
  * @method BookingConfirmRS BookingConfirm(Booking $bookingData) Method allows confirmation of the rate keys selected.  There is an option of confirming more than one rate key for the same hotel/room/board.
  * @method BookingCancellationRS BookingCancellation( $bookingId ) Method can cancel confirmed booking
  * @method BookingListRS BookingList( BookingList $bookData ) To get a list of bookings
+ * @method BookingDetailRS BookingDetail( $bookingId ) To get a Booking Detail
  */
 class HotelApiClient
 {
