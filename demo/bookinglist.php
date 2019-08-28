@@ -2,15 +2,8 @@
 require __DIR__ .'/../vendor/autoload.php';
 
 use hotelbeds\hotel_api_sdk\HotelApiClient;
-use hotelbeds\hotel_api_sdk\model\Destination;
-use hotelbeds\hotel_api_sdk\model\Occupancy;
-use hotelbeds\hotel_api_sdk\model\Pax;
-use hotelbeds\hotel_api_sdk\model\Rate;
-use hotelbeds\hotel_api_sdk\model\Stay;
 use hotelbeds\hotel_api_sdk\types\ApiVersion;
 use hotelbeds\hotel_api_sdk\types\ApiVersions;
-use hotelbeds\hotel_api_sdk\messages\AvailabilityRS;
-
 
 $reader = new Zend\Config\Reader\Ini();
 $config = $reader->fromFile(__DIR__.'/HotelApiClient.ini');
@@ -69,7 +62,6 @@ try {
     
     echo "<b>Booking List Raw Response <a href='https://developer.hotelbeds.com/docs/read/apitude_booking/booking/BookingDetail#bookingdetails-response'>(View Documentation)</a></b><br>";
     echo "<pre>".json_encode($bookingListRS->bookings->toArray(), JSON_PRETTY_PRINT)."</pre>";
-    echo "<pre>".json_encode($bookingListRS->bookings->iterator()->current()->reference, JSON_PRETTY_PRINT)."</pre>";
 }
 catch (\hotelbeds\hotel_api_sdk\types\HotelSDKException $e) {
     echo "\n" . $e->getMessage() . "\n";
