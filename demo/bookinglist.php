@@ -1,12 +1,4 @@
 <?php
-/**
- * Created by PhpStorm.
- * User: vmavromatis
- * Date: 05/09/2017
- * Time: 16:29
- */
-
-
 require __DIR__ .'/../vendor/autoload.php';
 
 use hotelbeds\hotel_api_sdk\HotelApiClient;
