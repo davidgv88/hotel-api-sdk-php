@@ -41,7 +41,7 @@ try {
 
     echo "<br><br>";
 
-    echo "<b>Availability Response <a href='https://developer.hotelbeds.com/docs/read/apitude_booking/Availability#response-parameters'>(View Documentation)</a></b><br>";
+    echo "<b>Availability Response</b><br>";
     echo "<table border='1'>";
     echo "<tr><td>Reference</td><td>creationDate</td><td>status</td><td>view</td></tr>";
 
@@ -60,7 +60,7 @@ try {
     echo '</table><br><br>';
     }
     
-    echo "<b>Booking List Raw Response <a href='https://developer.hotelbeds.com/docs/read/apitude_booking/booking/BookingDetail#bookingdetails-response'>(View Documentation)</a></b><br>";
+    echo "<b>Booking List Raw Response <a href='https://developer.hotelbeds.com/docs/read/apitude_booking/booking/BookingList#bookinglist-response'>(View Documentation)</a></b><br>";
     echo "<pre>".json_encode($bookingListRS->bookings->toArray(), JSON_PRETTY_PRINT)."</pre>";
 }
 catch (\hotelbeds\hotel_api_sdk\types\HotelSDKException $e) {
