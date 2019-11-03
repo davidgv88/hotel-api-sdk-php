@@ -19,6 +19,7 @@ class CheckRate extends ApiHelper
     public function __construct()
     {
         $this->validFields = [
+        	"language" => "string",
             "rooms" => "array"
         ];
     }
